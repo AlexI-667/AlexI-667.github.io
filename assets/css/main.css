@@ -2792,7 +2792,7 @@ input, select, textarea {
 				display: block;
 				height: 100%;
 				left: 0;
-				opacity: 0.85;
+				opacity: 0.5;
 				position: absolute;
 				width: 100%;
 				z-index: 2;
@@ -2825,33 +2825,31 @@ input, select, textarea {
 				filter: blur(0.5em);
 				opacity: 0;
 			}
-
-			.tiles article:nth-child(4n - 1), .tiles article:nth-child(4n - 2) {
-				width: 60%;
+			.tiles article:nth-child(n) {
+				width: 50%;
+			}
+			.tiles article:nth-child(5n) {
+				width: 100%;
 			}
 
-			.tiles article:nth-child(6n - 5):before {
+			.tiles article:nth-child(5n - 4):before {
 				background-color: #6fc3df;
 			}
 
-			.tiles article:nth-child(6n - 4):before {
-				background-color: #8d82c4;
+			.tiles article:nth-child(5n - 3):before {
+				background-color: #374472;
 			}
 
-			.tiles article:nth-child(6n - 3):before {
-				background-color: #ec8d81;
+			.tiles article:nth-child(5n - 2):before {
+				background-color: #38615a;
 			}
 
-			.tiles article:nth-child(6n - 2):before {
-				background-color: #e7b788;
+			.tiles article:nth-child(5n - 1):before {
+				background-color: #6e5740;
 			}
 
-			.tiles article:nth-child(6n - 1):before {
-				background-color: #8ea9e8;
-			}
-
-			.tiles article:nth-child(6n):before {
-				background-color: #87c5a4;
+			.tiles article:nth-child(5n):before {
+				background-color: #4f89f5;
 			}
 
 		@media screen and (max-width: 1280px) {
@@ -2866,9 +2864,11 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 980px) {
-
-			.tiles article {
-				width: 50% !important;
+			.tiles article:nth-child(n) {
+				width: 50%;
+			}
+			.tiles article:nth-child(5n) {
+				width: 100%;
 			}
 
 		}
@@ -3481,9 +3481,9 @@ input, select, textarea {
 				}
 
 		#banner.major {
-			height: 75vh;
-			min-height: 30em;
-			max-height: 50em;
+			height: 35vh;
+			min-height: 20em;
+			max-height: 45em;
 		}
 
 			#banner.major.alt {
