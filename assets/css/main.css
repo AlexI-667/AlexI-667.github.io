@@ -2810,9 +2810,30 @@ input, select, textarea {
 				z-index: 1;
 			}
 
+			@media (hover: hover){
 			.tiles article:hover:before {
 				opacity: 0;
 			}
+			}
+
+			@media (hover: none){
+				.tiles article:before {
+					-moz-transition: opacity 0.5s ease;
+					-webkit-transition: opacity 0.5s ease;
+					-ms-transition: opacity 0.5s ease;
+					transition: opacity 0.5s ease;
+					bottom: 0;
+					content: '';
+					display: block;
+					height: 100%;
+					left: 0;
+					opacity: 0;
+					position: absolute;
+					width: 100%;
+					z-index: 2;
+				}
+				}
+	
 
 			.tiles article.is-transitioning {
 				-moz-transform: scale(0.95);
@@ -3060,7 +3081,7 @@ input, select, textarea {
 		}
 
 /* Header */
-
+/*
 	@-moz-keyframes reveal-header {
 		0% {
 			top: -4em;
@@ -3108,7 +3129,7 @@ input, select, textarea {
 			opacity: 1;
 		}
 	}
-
+*/
 	#header {
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -3232,7 +3253,7 @@ input, select, textarea {
 						#header nav a[href="#menu"]:last-child:before, #header nav a[href="#menu"]:last-child:after {
 							right: 2em;
 						}
-
+/*
 		#header.reveal {
 			-moz-animation: reveal-header 0.35s ease;
 			-webkit-animation: reveal-header 0.35s ease;
@@ -3285,7 +3306,7 @@ input, select, textarea {
 		body.is-preload #header.alt {
 			opacity: 0;
 		}
-
+*/
 		@media screen and (max-width: 1680px) {
 
 			#header nav a[href="#menu"] {
@@ -3374,7 +3395,6 @@ input, select, textarea {
 		}
 
 /* Banner */
-
 	#banner {
 		-moz-align-items: center;
 		-webkit-align-items: center;
